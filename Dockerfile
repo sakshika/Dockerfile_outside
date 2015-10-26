@@ -24,7 +24,7 @@ RUN apt-get update
 RUN apt-get -y install php5-cli php5-common php5-mysql php5-xdebug libapache2-mod-php5
 
 RUN curl -sS https://getcomposer.org/installer | php
-COPY composer.phar /usr/local/bin/composer
+RUN cp composer.phar /usr/local/bin/composer
 RUN apt-get update
 RUN apt-get -y install php5-xsl
 RUN find /etc/php5/cli/conf.d/ -name "*.ini" -exec sed -i -re 's/^(\s*)#(.*)/\1;\2/g' {} \;
