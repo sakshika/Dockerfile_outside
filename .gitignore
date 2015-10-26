@@ -1,0 +1,6 @@
+vendor/*
+build/api
+build/logs
+build/pdepend
+build/phpdox
+npm-debug.log
