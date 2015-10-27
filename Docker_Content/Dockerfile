@@ -72,3 +72,9 @@ WORKDIR $APP_PATH/
 #CMD ["ant"]
 
 EXPOSE 80
+
+
+
+ADD ./run.sh /usr/bin/run.sh
+RUN chmod +x /usr/bin/run.sh
+CMD ["/bin/sh","-e","/usr/bin/run.sh"]
